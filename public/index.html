@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animovid — Anime Movie Streaming</title>
+  <meta name="description"
+    content="Animovid - Tonton dan download anime movie favorit kamu secara gratis. Streaming langsung di browser dengan kualitas terbaik.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" id="logoLink">
+        <span class="logo-icon">🎬</span>
+        <span class="logo-text">Animo<span class="logo-accent">vid</span></span>
+      </a>
+      <div class="search-container" id="searchContainer">
+        <div class="search-wrapper">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Cari anime movie...">
+          <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button class="nav-btn" id="searchToggle" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <div class="movie-count" id="movieCount">
+          <span class="count-number">0</span>
+          <span class="count-label">Movies</span>
+        </div>
+        <!-- Auth: Guest -->
+        <button class="nav-btn auth-btn" id="loginBtn" title="Login">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span class="auth-btn-text">Login</span>
+        </button>
+        <!-- Auth: Logged in -->
+        <div class="user-menu" id="userMenu" style="display: none;">
+          <button class="user-avatar-btn" id="userAvatarBtn">
+            <div class="user-avatar" id="userAvatar">U</div>
+            <span class="user-name" id="userName">User</span>
+          </button>
+          <div class="user-dropdown" id="userDropdown">
+            <div class="dropdown-header">
+              <span class="dropdown-email" id="dropdownEmail">user@email.com</span>
+            </div>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item" id="logoutBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+              </svg>
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HOME PAGE ==================== -->
+  <div id="homePage">
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+      <!-- Background Image Slideshow (populated by JS from img/ folder) -->
+      <div class="hero-slideshow" id="heroSlideshow"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          ANIME MOVIE STREAMING
+        </div>
+        <h1 class="hero-title">
+          Tonton Anime Movie
+          <span class="hero-gradient">Favoritmu</span>
+        </h1>
+        <p class="hero-subtitle">
+          Streaming langsung atau download anime movie dengan kualitas terbaik.
+          Cepat, mudah, dan gratis.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-icon">🎥</span>
+            <div>
+              <span class="stat-value" id="totalMovies">0</span>
+              <span class="stat-label">Total Movie</span>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">⚡</span>
+            <div>
+              <span class="stat-value">HD</span>
+              <span class="stat-label">Quality</span>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">📥</span>
+            <div>
+              <span class="stat-value">Free</span>
+              <span class="stat-label">Download</span>
+            </div>
+          </div>
+        </div>
+        <a href="#movies" class="hero-cta">
+          <span>Jelajahi Koleksi</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <polyline points="19 12 12 19 5 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Genre Filter -->
+    <section class="filter-section" id="movies">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-icon">🍿</span>
+            Koleksi Movie
+          </h2>
+          <div class="genre-filters" id="genreFilters">
+            <button class="genre-btn active" data-genre="all">Semua</button>
+            <button class="genre-btn" data-genre="action">Action</button>
+            <button class="genre-btn" data-genre="romance">Romance</button>
+            <button class="genre-btn" data-genre="fantasy">Fantasy</button>
+            <button class="genre-btn" data-genre="comedy">Comedy</button>
+            <button class="genre-btn" data-genre="drama">Drama</button>
+            <button class="genre-btn" data-genre="sci-fi">Sci-Fi</button>
+            <button class="genre-btn" data-genre="horror">Horror</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Movie Grid -->
+    <section class="movies-section">
+      <div class="container">
+        <div class="movie-grid" id="movieGrid"></div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+          <div class="empty-icon">🎬</div>
+          <h3>Belum Ada Movie</h3>
+          <p>Tambahkan file video anime ke folder <code>movies/</code> dan poster gambar ke folder <code>posters/</code>
+            di server.</p>
+          <div class="empty-formats">
+            <span>Format video didukung:</span>
+            <div class="format-tags">
+              <span class="format-tag">MP4</span>
+              <span class="format-tag">WEBM</span>
+              <span class="format-tag">MKV</span>
+              <span class="format-tag">AVI</span>
+              <span class="format-tag">MOV</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Results -->
+        <div class="no-results" id="noResults" style="display: none;">
+          <div class="empty-icon">🔍</div>
+          <h3>Tidak Ditemukan</h3>
+          <p>Coba kata kunci lain atau ubah filter genre.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== DETAIL PAGE ==================== -->
+  <div id="detailPage" class="detail-page" style="display: none;">
+    <div class="detail-backdrop" id="detailBackdrop"></div>
+    <div class="container">
+      <!-- Back Button -->
+      <button class="back-btn" id="backBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Kembali</span>
+      </button>
+
+      <!-- Movie Detail Content -->
+      <div class="detail-layout">
+        <!-- Poster -->
+        <div class="detail-poster-wrap">
+          <div class="detail-poster" id="detailPoster">
+            <img id="detailPosterImg" src="" alt="">
+            <div class="detail-poster-placeholder" id="detailPosterPlaceholder">🎬</div>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="detail-info">
+          <h1 class="detail-title" id="detailTitle">Movie Title</h1>
+
+          <div class="detail-badges" id="detailBadges">
+            <!-- Genres rendered here -->
+          </div>
+
+          <div class="detail-meta-row">
+            <div class="detail-rating" id="detailRating">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#facc15" stroke="#facc15" stroke-width="1">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <span class="rating-value">7.5</span>
+              <span class="rating-max">/ 10</span>
+            </div>
+            <span class="detail-meta-divider">•</span>
+            <span class="detail-meta-item" id="detailYear">2024</span>
+            <span class="detail-meta-divider">•</span>
+            <span class="detail-meta-item" id="detailDuration">~ min</span>
+            <span class="detail-meta-divider">•</span>
+            <span class="detail-meta-item" id="detailFormat">MP4</span>
+          </div>
+
+          <div class="detail-section">
+            <h3 class="detail-section-title">Sinopsis</h3>
+            <p class="detail-synopsis" id="detailSynopsis">Synopsis goes here.</p>
+          </div>
+
+          <div class="detail-info-grid">
+            <div class="info-item">
+              <span class="info-label">Director</span>
+              <span class="info-value" id="detailDirector">Unknown</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Studio</span>
+              <span class="info-value" id="detailStudio">Unknown</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Format</span>
+              <span class="info-value" id="detailFormatInfo">MP4</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Ukuran</span>
+              <span class="info-value" id="detailSize">0 MB</span>
+            </div>
+          </div>
+
+          <div class="detail-actions">
+            <button class="detail-play-btn" id="detailPlayBtn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span>Tonton Sekarang</span>
+            </button>
+            <a class="detail-download-btn" id="detailDownloadBtn" href="#" download>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Player (hidden until play) -->
+      <div class="detail-player-section" id="detailPlayerSection" style="display: none;">
+        <div class="detail-player-header">
+          <h3>🎬 Now Playing</h3>
+          <button class="detail-player-close" id="detailPlayerClose">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="detail-player-wrapper">
+          <iframe id="drivePlayer" class="drive-player" allowfullscreen allow="autoplay; fullscreen"></iframe>
+        </div>
+      </div>
+
+      <!-- Comment Section -->
+      <div class="comment-section" id="commentSection">
+        <h3 class="comment-title">💬 Komentar</h3>
+
+        <!-- Comment Form (visible when logged in) -->
+        <div class="comment-form" id="commentForm" style="display: none;">
+          <div class="comment-form-header">
+            <div class="comment-avatar" id="commentAvatar">U</div>
+            <span class="comment-form-name" id="commentFormName">User</span>
+          </div>
+          <textarea class="comment-input" id="commentInput" placeholder="Tulis komentar kamu tentang movie ini..."
+            rows="3"></textarea>
+          <div class="comment-form-actions">
+            <span class="comment-char-count" id="commentCharCount">0/500</span>
+            <button class="comment-submit-btn" id="commentSubmitBtn">Kirim Komentar</button>
+          </div>
+        </div>
+
+        <!-- Login prompt (visible when not logged in) -->
+        <div class="comment-login-prompt" id="commentLoginPrompt">
+          <p>🔒 <a href="#" id="commentLoginLink">Login</a> untuk menulis komentar</p>
+        </div>
+
+        <!-- Comments List -->
+        <div class="comment-list" id="commentList">
+          <div class="comment-loading" id="commentLoading">Memuat komentar...</div>
+        </div>
+
+        <div class="comment-empty" id="commentEmpty" style="display: none;">
+          <p>Belum ada komentar. Jadilah yang pertama!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">Animo<span class="logo-accent">vid</span></span>
+        </div>
+        <p class="footer-text">Anime Movie Streaming — Tonton & Download Gratis</p>
+        <div class="footer-divider"></div>
+        <p class="footer-copyright">© 2026 Animovid. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span class="toast-icon"></span>
+    <span class="toast-message"></span>
+  </div>
+
+  <!-- Auth Modal -->
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="auth-close" id="authClose">✕</button>
+      <div class="auth-header">
+        <h2 class="auth-title" id="authTitle">Login</h2>
+        <p class="auth-subtitle" id="authSubtitle">Masuk ke akunmu untuk download dan komentar</p>
+      </div>
+
+      <!-- Auth Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tabLogin" data-tab="login">Login</button>
+        <button class="auth-tab" id="tabRegister" data-tab="register">Register</button>
+      </div>
+
+      <!-- Login Form -->
+      <form class="auth-form" id="loginForm">
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="nama@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Masukkan password" required minlength="6">
+        </div>
+        <button type="submit" class="auth-submit-btn" id="loginSubmit">Login</button>
+        <div class="auth-error" id="loginError"></div>
+      </form>
+
+      <!-- Register Form -->
+      <form class="auth-form" id="registerForm" style="display: none;">
+        <div class="form-group">
+          <label for="registerName">Nama Tampilan</label>
+          <input type="text" id="registerName" placeholder="Nama kamu" required minlength="2">
+        </div>
+        <div class="form-group">
+          <label for="registerEmail">Email</label>
+          <input type="email" id="registerEmail" placeholder="nama@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="registerPassword">Password</label>
+          <input type="password" id="registerPassword" placeholder="Minimal 6 karakter" required minlength="6">
+        </div>
+        <button type="submit" class="auth-submit-btn" id="registerSubmit">Buat Akun</button>
+        <div class="auth-error" id="registerError"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

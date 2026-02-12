@@ -1,0 +1,118 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "title": "Look Back",
+            "genre": "Drama",
+            "genres": [
+                "Drama",
+                "Slice of Life",
+                "Coming-of-Age"
+            ],
+            "year": 2024,
+            "synopsis": "Ayumu Fujino, siswi kelas empat SD yang percaya diri, rajin menggambar manga empat panel untuk koran sekolahnya. Suatu hari ia mendengar tentang Kyomoto, siswi penyendiri yang tak pernah masuk sekolah tapi jauh lebih berbakat menggambar. Rasa iri mendorong Fujino berlatih mati-matian, hingga pertemuan tak terduga merubah segalanya. Persahabatan mereka tumbuh lewat kecintaan terhadap manga, membawa mereka mengejar mimpi bersama sebagai mangaka. Namun tragedi mengubah hidup mereka selamanya. Diadaptasi dari one-shot manga karya Tatsuki Fujimoto (Chainsaw Man), film ini menyajikan kisah yang menyentuh hati tentang kreativitas, persahabatan sejati, kehilangan, dan bagaimana seni bisa mengubah hidup seseorang.",
+            "duration": "58 menit",
+            "rating": "8.5",
+            "director": "Kiyotaka Oshiyama",
+            "studio": "Studio Durian",
+            "poster": "/img/look back.png",
+            "driveId": "1NSq-uOCpKiToyXks9GLnfOshK2g3xgxD",
+            "format": "MP4"
+        },
+        {
+            "id": 2,
+            "title": "Natsu e no Tunnel, Sayonara no Deguchi",
+            "genre": "Romance",
+            "genres": [
+                "Romance",
+                "Drama",
+                "Supernatural"
+            ],
+            "year": 2022,
+            "synopsis": "Kaoru Tono, siswa SMA yang terpukul oleh kematian adik perempuannya Karen dan perceraian orang tuanya, mendengar rumor tentang Terowongan Urashima—terowongan misterius yang katanya bisa mengabulkan keinginan apapun. Namun ada harga yang harus dibayar: waktu di dalam terowongan mengalir jauh lebih cepat, dan siapapun yang masuk akan menua drastis. Saat Anzu Hanashiro, siswi pindahan yang dingin tapi menyimpan mimpi besar, mengetahui rahasia Kaoru, mereka membentuk aliansi untuk menyelidiki terowongan bersama. Di antara misteri dan bahaya, tumbuh perasaan yang tak terduga di antara keduanya. Diadaptasi dari light novel karya Mei Hachimoku, film ini mengisahkan cinta remaja, pengorbanan, dan keberanian untuk merelakan masa lalu demi masa depan.",
+            "duration": "83 menit",
+            "rating": "7.8",
+            "director": "Tomohisa Taguchi",
+            "studio": "CLAP",
+            "poster": "/img/tunel.jpg",
+            "driveId": "1Z-4FuGwGZJat8tgvMOBrB4IevKMym8Dv",
+            "format": "MP4"
+        },
+        {
+            "id": 3,
+            "title": "Miss Kobayashi's Dragon Maid: A Lonely Dragon",
+            "genre": "Comedy",
+            "genres": [
+                "Comedy",
+                "Fantasy",
+                "Slice of Life"
+            ],
+            "year": 2025,
+            "synopsis": "Kehidupan damai Kobayashi bersama Tohru, Kanna, dan Ilulu terusik saat Kimun Kamui—ayah Kanna sekaligus pemimpin Pasukan Chaos dari Dunia Naga—muncul secara tiba-tiba. Ia memaksa Kanna pulang ke Dunia Naga untuk menebus sebuah kesalahan besar di masa lalu. Kanna harus memilih: tetap bersama keluarga barunya di dunia manusia, atau mematuhi perintah ayahnya. Sementara Kobayashi berjuang memperbaiki hubungan Kanna dan ayahnya, Ilulu menemukan bahwa ada kekuatan tersembunyi yang diam-diam memanipulasi perang antara faksi Chaos dan Harmony. Film ini adalah sekuel langsung dari season kedua anime, diproduksi oleh Kyoto Animation dengan kualitas animasi memukau yang menjadi ciri khas studio tersebut.",
+            "duration": "100 menit",
+            "rating": "8.3",
+            "director": "Tatsuya Ishihara",
+            "studio": "Kyoto Animation",
+            "poster": "/img/kobayashi.jpg",
+            "driveId": "1KBrfCvvlAl9Pg9R2J5uhfKq-hyJ8zJ3y",
+            "format": "MP4"
+        },
+        {
+            "id": 4,
+            "title": "Chainsaw Man The Movie: Reze Arc",
+            "genre": "Action",
+            "genres": [
+                "Action",
+                "Horror",
+                "Romance"
+            ],
+            "year": 2025,
+            "synopsis": "Setelah pertempuran melawan Iblis Keabadian dan Iblis Katana, kehidupan Denji sebagai Devil Hunter di bawah Divisi Keamanan Publik mulai terasa monoton. Semua berubah ketika ia bertemu Reze, gadis cantik yang bekerja di kafe kecil. Untuk pertama kalinya, Denji merasakan cinta yang tulus—bukan obsesinya pada Makima. Namun di balik senyum manisnya, Reze menyimpan identitas mematikan sebagai Iblis Bom, agen Soviet yang dikirim untuk merebut jantung Chainsaw Devil dari tubuh Denji. Saat kebenaran terungkap, pertempuran dahsyat pecah di tengah kota, melibatkan Aki, Angel Devil, Beam, dan seluruh pasukan pemburu iblis. Diadaptasi dari manga volume 5-6 karya Tatsuki Fujimoto, film ini memadukan aksi spektakuler, romansa yang tragis, dan eksplorasi mendalam tentang apa artinya dicintai.",
+            "duration": "100 menit",
+            "rating": "8.7",
+            "director": "Tatsuya Yoshihara",
+            "studio": "MAPPA",
+            "poster": "/img/reze.png",
+            "driveId": "1LMTfiNkg3mjdNEM_9GQFXgYJWartilPT",
+            "format": "MKV"
+        },
+        {
+            "id": 5,
+            "title": "Summer Ghost",
+            "genre": "Drama",
+            "genres": [
+                "Drama",
+                "Supernatural",
+                "Fantasy"
+            ],
+            "year": 2021,
+            "synopsis": "Tomoya, Aoi, dan Ryo—tiga siswa SMA yang tidak saling kenal—bertemu lewat internet karena satu kesamaan: ketertarikan pada legenda urban tentang Hantu Musim Panas. Konon, di sebuah lapangan udara terbengkalai, hantu seorang wanita muda akan muncul jika kembang api dinyalakan saat musim panas. Masing-masing datang dengan luka yang berat: Tomoya kehilangan semangat hidup karena ibunya memaksanya meninggalkan passion melukis, Aoi ingin mengakhiri hidupnya akibat perundungan tanpa henti, dan Ryo mengidap penyakit terminal yang tak bisa disembuhkan. Saat mereka akhirnya bertemu sang hantu—Ayane, wanita muda yang lembut—ia mengungkapkan fakta mengerikan: hanya mereka yang hampir menyentuh kematian yang bisa melihatnya. Film debut sutradara loundraw ini mengeksplorasi makna kehidupan, kematian, dan menemukan alasan untuk terus hidup dalam keindahan visual yang memukau.",
+            "duration": "40 menit",
+            "rating": "7.2",
+            "director": "loundraw",
+            "studio": "Flat Studio",
+            "poster": "/img/summer ghost.jpg",
+            "driveId": "10sziuh7hTkGLvWzYLIe8li_MCP1vlUAQ",
+            "format": "MKV"
+        },
+        {
+            "id": 6,
+            "title": "Koe no Katachi (A Silent Voice)",
+            "genre": "Drama",
+            "genres": [
+                "Drama",
+                "Romance",
+                "Slice of Life"
+            ],
+            "year": 2016,
+            "synopsis": "Shouya Ishida dulunya adalah anak SD yang paling berisik di kelasnya. Ketika Shouko Nishimiya, seorang gadis tuli, pindah ke sekolahnya, Shouya memimpin teman-temannya mem-bully Shouko tanpa ampun—merusak alat bantu dengarnya, mengejeknya, hingga membuat Shouko terpaksa pindah sekolah. Karma berbalik: teman-teman yang dulu ikut mem-bully kini menjadikan Shouya kambing hitam. Ia dikucilkan, kehilangan semua teman, dan hidup dalam penyesalan bertahun-tahun. Di SMA, Shouya yang kini pendiam dan penuh rasa bersalah memutuskan untuk mencari Shouko dan meminta maaf. Pertemuan kembali mereka membuka luka lama sekaligus kesempatan baru. Disutradarai oleh Naoko Yamada dan diproduksi Kyoto Animation, film ini adalah mahakarya tentang bullying, penebusan dosa, disabilitas, kesehatan mental, dan kekuatan pengampunan yang mengubah hidup.",
+            "duration": "130 menit",
+            "rating": "8.9",
+            "director": "Naoko Yamada",
+            "studio": "Kyoto Animation",
+            "poster": "/img/a silent voice.jpg",
+            "driveId": "1Goqvw6PjjXhdme70JjZTyPkyHggTMR0P",
+            "format": "MP4"
+        }
+    ]
+}
