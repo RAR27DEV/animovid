@@ -151,6 +151,25 @@
             "poster": "/img/gintama.jpg",
             "driveId": "1gi7ptPHL0o43KevQjpAOK4whSvUWgaSm",
             "format": "MP4"
+        },
+        {
+            "id": 9,
+            "title": "Violet Evergarden: The Movie",
+            "genre": "Drama",
+            "genres": [
+                "Drama",
+                "Romance",
+                "Fantasy"
+            ],
+            "year": 2020,
+            "synopsis": "Violet Evergarden, mantan tentara yang kehilangan kedua tangannya dalam Perang Besar, kini bekerja sebagai Auto Memory Doll—penulis surat untuk orang-orang yang tak mampu mengungkapkan perasaannya. Setelah bertahun-tahun menulis surat dan memahami emosi manusia, Violet masih menyimpan satu luka terdalam: kata-kata terakhir Mayor Gilbert Bougainvillea, pria yang paling ia cintai—'Aishiteru'. Ketika sebuah surat ditemukan dari seorang gadis kecil di masa lalu yang menghubungkannya kembali ke Gilbert, Violet menemukan petunjuk bahwa Gilbert mungkin masih hidup. Perjalanan emosionalnya membawanya ke sebuah pulau terpencil, tempat kebenaran yang ia cari selama ini akhirnya terungkap. Film penutup seri ini menghadirkan klimaks yang sempurna dari perjalanan Violet dalam memahami cinta, kehilangan, dan makna sejati dari kata 'Aku mencintaimu'. Diproduksi oleh Kyoto Animation dengan keindahan visual yang luar biasa, film ini menjadi penghormatan mendalam bagi para penggemar dan juga bagi studio yang bangkit setelah tragedi 2019.",
+            "duration": "140 menit",
+            "rating": "8.9",
+            "director": "Taichi Ishidate",
+            "studio": "Kyoto Animation",
+            "poster": "/img/violet.jpg",
+            "driveId": "1eD-GiIfKUfHSNqt2orQgApmYJaankK8v",
+            "format": "MP4"
         }
     ]
 }
