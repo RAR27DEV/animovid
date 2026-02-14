@@ -170,6 +170,44 @@
             "poster": "/img/violet.jpg",
             "driveId": "1eD-GiIfKUfHSNqt2orQgApmYJaankK8v",
             "format": "MP4"
+        },
+        {
+            "id": 10,
+            "title": "Josee to Tora to Sakana-tachi",
+            "genre": "Romance",
+            "genres": [
+                "Romance",
+                "Drama",
+                "Slice of Life"
+            ],
+            "year": 2020,
+            "synopsis": "Tsuneo Suzukawa, mahasiswa biologi kelautan yang bermimpi belajar di luar negeri, suatu hari menyelamatkan seorang gadis yang jatuh dari kursi rodanya menuruni bukit. Gadis itu adalah Josee—nama pena dari Kumiko Yamamura—seorang pelukis muda penyandang disabilitas yang hampir seluruh hidupnya dihabiskan di dalam rumah di bawah pengawasan neneknya yang overprotektif. Sebagai imbalan, Tsuneo dipekerjakan untuk merawat Josee. Awalnya hubungan mereka penuh gesekan: Josee yang keras kepala dan bermulut tajam terus memerintah Tsuneo sesuka hati. Namun seiring waktu, Tsuneo mulai membuka dunia Josee—membawanya ke laut untuk pertama kalinya, ke perpustakaan, dan ke tempat-tempat yang selama ini hanya ia lihat lewat buku. Josee pun perlahan membuka hatinya dan menemukan keberanian untuk bermimpi. Ketika sebuah kecelakaan tragis mengubah segalanya, keduanya harus memilih: menyerah pada takdir, atau berjuang demi masa depan bersama. Diadaptasi dari novel karya Seiko Tanabe, film ini adalah kisah cinta yang indah tentang dua orang yang saling menginspirasi untuk melampaui batasan hidup mereka.",
+            "duration": "98 menit",
+            "rating": "8.4",
+            "director": "Kotaro Tamura",
+            "studio": "BONES",
+            "poster": "/img/Josee to Tora to Sakana.jpg",
+            "driveId": "1iPKUqi8SSvWl1FHST-V0UR_Xth2gG57C",
+            "format": "MP4"
+        },
+        {
+            "id": 11,
+            "title": "Spy x Family Code: White",
+            "genre": "Action",
+            "genres": [
+                "Action",
+                "Comedy",
+                "Adventure"
+            ],
+            "year": 2023,
+            "synopsis": "Keluarga Forger yang unik—Loid sang mata-mata elit, Yor sang pembunuh bayaran, dan Anya si gadis kecil pembaca pikiran—kembali dalam petualangan baru yang lebih besar dan berbahaya. Saat Anya mendapat tugas memasak di sekolah, ia secara tidak sengaja membeli cokelat yang di dalamnya tersembunyi microchip berisi kode rahasia senjata pemusnah massal. Tiba-tiba, keluarga Forger menjadi target setiap organisasi intelijen dan kriminal di dunia. Petualangan membawa mereka ke kota wisata Frigis yang bersalju, di mana Loid harus menyelesaikan misi sambil menjaga rahasianya dari keluarga, Yor bertarung melawan pasukan elite dengan kekuatan monsternya, dan Anya—dengan kemampuan telepatinya—berusaha menyelamatkan semua orang dengan caranya sendiri yang kocak. Di balik aksi dan komedi, film ini mengeksplorasi makna sesungguhnya dari keluarga: bahwa ikatan sejati tidak membutuhkan darah yang sama, cukup rasa cinta dan keinginan untuk saling melindungi. Diproduksi oleh WIT Studio dan CloverWorks dengan kualitas animasi film yang luar biasa, ini adalah pengalaman sinematik penuh tawa, air mata, dan aksi yang tak terlupakan.",
+            "duration": "110 menit",
+            "rating": "8.2",
+            "director": "Takashi Katagiri",
+            "studio": "WIT Studio x CloverWorks",
+            "poster": "/img/spy x family.jpg",
+            "driveId": "1Z0fQFH7ISskvGOgLQSofjsJ_HIV4t7DP",
+            "format": "MP4"
         }
     ]
 }
