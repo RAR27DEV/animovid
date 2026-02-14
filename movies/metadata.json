@@ -113,6 +113,44 @@
             "poster": "/img/a silent voice.jpg",
             "driveId": "1Goqvw6PjjXhdme70JjZTyPkyHggTMR0P",
             "format": "MP4"
+        },
+        {
+            "id": 7,
+            "title": "Overlord: The Sacred Kingdom",
+            "genre": "Action",
+            "genres": [
+                "Action",
+                "Fantasy",
+                "Dark Fantasy"
+            ],
+            "year": 2024,
+            "synopsis": "Kerajaan Suci Roble yang damai dipimpin oleh Ratu Calca Bessarez mendadak menghadapi ancaman terbesar dalam sejarahnya. Jaldabaoth—iblis kelas tinggi yang sejatinya adalah Demiurge, pelayan setia Ainz Ooal Gown—memimpin pasukan besar demi-human untuk menghancurkan Tembok Suci yang melindungi kerajaan selama berabad-abad. Dalam pertempuran yang brutal, Ratu Calca terbunuh dan Holy Kingdom hampir jatuh. Neia Baraja, seorang paladin muda yang selamat dari pembantaian, ditugaskan mencari bantuan ke Sorcerer Kingdom. Di sana ia bertemu Ainz Ooal Gown, sang Raja Undead yang maha kuasa. Ainz setuju membantu—tetapi dengan agenda tersembunyi miliknya sendiri. Saat Ainz memasuki medan perang, dunia menyaksikan kekuatan yang melampaui pemahaman manusia. Film ini diadaptasi dari volume 12 dan 13 light novel karya Kugane Maruyama, menghadirkan pertempuran epik, strategi politik yang rumit, dan pertanyaan moral tentang keadilan sejati.",
+            "duration": "138 menit",
+            "rating": "8.1",
+            "director": "Naoyuki Itou",
+            "studio": "Madhouse",
+            "poster": "/img/overlord.jpg",
+            "driveId": "1YsrrnB-FbTzjkAkajby_0vhr0m4RkUIl",
+            "format": "MP4"
+        },
+        {
+            "id": 8,
+            "title": "Gintama: The Final",
+            "genre": "Action",
+            "genres": [
+                "Action",
+                "Comedy",
+                "Sci-Fi"
+            ],
+            "year": 2021,
+            "synopsis": "Pertempuran terakhir telah tiba. Utsuro, entitas abadi yang menjadi sumber segala Altana di Bumi, bangkit kembali dengan kekuatan penuh dan bertekad menghancurkan seluruh planet. Kabukicho, distrik tempat Gintoki dan kawan-kawan tinggal, menjadi medan perang terakhir antara kekuatan manusia, Amanto, dan para samurai melawan pasukan kegelapan Utsuro. Sakata Gintoki, sang samurai berambut perak yang biasanya malas dan suka makan parfait, kali ini harus menghadapi gurunya sendiri—Yoshida Shouyou, yang jiwanya terperangkap dalam tubuh Utsuro. Bersama Shinpachi, Kagura, Takasugi, Katsura, dan seluruh karakter ikonik dari sepanjang seri, Gintoki berjuang bukan hanya untuk menyelamatkan dunia, tapi juga untuk membebaskan jiwa guru yang paling ia cintai. Film penutup seri Gintama ini menggabungkan aksi spektakuler, komedi khas yang membuat tertawa di tengah air mata, dan emosi mendalam yang menjadi jiwa dari keseluruhan franchise selama 15 tahun.",
+            "duration": "104 menit",
+            "rating": "8.8",
+            "director": "Chizuru Miyawaki",
+            "studio": "Bandai Namco Pictures",
+            "poster": "/img/gintama.jpg",
+            "driveId": "1gi7ptPHL0o43KevQjpAOK4whSvUWgaSm",
+            "format": "MP4"
         }
     ]
 }
